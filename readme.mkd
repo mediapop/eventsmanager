@@ -1,0 +1,17 @@
+# EventsManager
+
+For adding javascript event handling inside of a custom object.
+
+    function MyObject(){
+        var eventsManager = new EventsManger(this);
+        this.on = eventsManager.on;
+        this.off = eventsManager.off;
+        this.trigger = eventsManager.trigger;
+    }
+
+    var myObject = new MyObject();
+    myObject.on("crazyness", function(){
+        console.log(this); // MyObject;
+        console.log("Crazyness!");
+    })
+    myObject.trigger("crazyness");
