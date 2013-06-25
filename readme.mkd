@@ -1,6 +1,6 @@
 # EventsManager
 
-For adding javascript event handling inside of a custom object.
+For adding the events idiom to your own objects.
 
     function MyObject(){
         var eventsManager = new EventsManger(this);
