@@ -10,7 +10,7 @@ function EventsManager(owner){
         var handlers = eventHandlers[event];
         if(!handlers) return;
         for(var i = 0; i < handlers.length; ++i){
-            handlers[i].apply(owner);
+            handlers[i].apply(owner, Array.prototype.slice.call(arguments, 1));
         }
     };
     this.off = function(event, handler){

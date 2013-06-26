@@ -15,3 +15,8 @@ For adding the events idiom to your own objects.
         console.log("Crazyness!");
     })
     myObject.trigger("crazyness");
+
+    myObject.on("somethingy", function(wowArguments){
+       console.log(wowArguments);
+    });
+    myObject.trigger('somethingy', 1);
