@@ -20,3 +20,9 @@ For adding the events idiom to your own objects.
        console.log(wowArguments);
     });
     myObject.trigger('somethingy', 1);
+
+
+# Test
+
+    npm install -g mocha
+    make test
