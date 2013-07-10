@@ -9,11 +9,34 @@ For adding the events idiom to your own objects.
         this.trigger = eventsManager.trigger;
     }
 
+Or much better:
+
+    function MyObject(){};
+    MyObject.prototype = new EventsManager();
+
+# API
+
     var myObject = new MyObject();
+
+## On
+
+Bind events.
+
     myObject.on("crazyness", function(){
         console.log(this); // MyObject;
         console.log("Crazyness!");
     })
+
+## Off
+
+Unbind events.
+
+    myObject.off("crazyness")
+
+## Trigger
+
+Cause stuff to happen.
+
     myObject.trigger("crazyness");
 
     myObject.on("somethingy", function(wowArguments){
